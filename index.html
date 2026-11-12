@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>AXIAL — Oficina de Performance</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--i1:url(images/foto-1.jpg);--i2:url(images/foto-2.jpg);--i4:url(images/foto-3.jpg);--i5:url(images/foto-4.jpg);--bg:#EEEFEF;--ink:#16181A;--mut:#5d6165;--line:#d3d5d6;--dk:#0C0D0F;--ac:#C6F10E;--acd:#6f8a00;--d:'Archivo',system-ui,sans-serif;--m:'JetBrains Mono',ui-monospace,monospace;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--d)}
+a{color:inherit;text-decoration:none}:focus-visible{outline:3px solid #16181A;outline-offset:3px}.dk :focus-visible{outline-color:var(--ac)}
+.lb{font:500 10px var(--m);letter-spacing:.2em;text-transform:uppercase;color:var(--acd)}.dk .lb{color:var(--ac)}
+h1,h2{font-stretch:125%;font-weight:400;text-transform:uppercase;line-height:1.08}h1{font-size:clamp(34px,5vw,64px)}h2{font-size:clamp(26px,3vw,40px)}
+.btn{display:inline-flex;gap:18px;align-items:center;justify-content:space-between;padding:15px 22px;font:600 11px var(--d);font-stretch:125%;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink);background:transparent;color:inherit;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateX(3px)}.btn.p{background:var(--ac);border-color:var(--ac);color:#111}.btn.p:hover{background:#d8ff2a}.dk .btn{border-color:#fff}.dk .btn.p{border-color:var(--ac)}
+header{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;height:76px;padding-left:40px;background:#D9DCDD;border-bottom:1px solid #c3c6c8;color:#16181A}
+.logo{font-stretch:125%;font-weight:700;letter-spacing:.34em;font-size:20px;line-height:1}.logo small{display:block;font:400 8px var(--m);letter-spacing:.4em;margin-top:5px}
+nav{display:flex;gap:34px;font:700 12px var(--d);font-stretch:115%;letter-spacing:.14em;text-transform:uppercase;color:#16181A}nav a{padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}nav a:hover{border-color:var(--ac)}
+header .btn{height:76px;min-width:190px;border:0}
+.hero{position:relative;min-height:640px;overflow:hidden;display:flex;align-items:center;background:var(--bg)}
+.hero .ph{position:absolute;right:0;top:0;bottom:0;width:70%;background:var(--i1) 50% 74%/cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%)}
+.hero .in{position:relative;padding:90px 40px 70px;max-width:560px}.hero h1{margin:16px 0 22px}.hero p{max-width:300px;color:var(--mut);margin-bottom:30px;font-size:14px}
+.hero .bt{display:flex;gap:8px;flex-wrap:wrap}.dots{position:absolute;left:40px;bottom:30px;font:400 10px var(--m);letter-spacing:.14em;color:var(--mut)}.dots b{font-weight:500;color:var(--ink);border-bottom:2px solid var(--ac);padding-bottom:3px;margin-right:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#F4F5F5;border-bottom:1px solid var(--line)}
+.stats div{padding:36px 10px;text-align:center;border-right:1px solid var(--line)}.stats div:last-child{border:0}.stats b{display:block;font-stretch:125%;font-weight:400;font-size:clamp(26px,3.2vw,40px);line-height:1.2}.stats span{font:400 10px var(--m);letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.wrap{max-width:1280px;margin:auto}
+.lin{display:grid;grid-template-columns:3fr 9fr;gap:40px;padding:64px 40px;align-items:center}.lin h2{margin:12px 0 16px}.lin p{color:var(--mut);margin-bottom:24px;max-width:240px;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{position:relative;height:300px;background:#000 center/cover;color:#fff;display:flex;align-items:flex-end;padding:18px;overflow:hidden;transition:transform .3s}
+.card:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000e 8%,transparent 70%)}.card:hover{transform:translateY(-6px)}
+.card div{position:relative;font-size:13px}.card b{display:block;font-stretch:125%;font-weight:400;font-size:15px;text-transform:uppercase}.card b em{display:block;font-style:normal;color:var(--ac)}.card span{display:block;margin-top:8px;font-size:12px;color:#ccc}
+.dk{background:var(--dk);color:#fff}.pw{display:grid;grid-template-columns:4fr 8fr;align-items:center;min-height:380px;overflow:hidden}
+.pw .tx{padding:56px 40px}.pw h2{margin:12px 0 16px}.pw p{color:#aaa;font-size:14px;max-width:340px}.ic{display:flex;gap:26px;margin:26px 0}.ic b{display:block;font:500 12px var(--m);color:var(--ac)}.ic span{font:400 9px var(--m);letter-spacing:.14em;color:#999;text-transform:uppercase}
+.pw .ph{height:100%;min-height:380px;background:var(--i5) 50% 55%/cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%);mask-image:linear-gradient(90deg,transparent,#000 30%)}
+.fd{display:grid;grid-template-columns:7fr 5fr;align-items:center;min-height:340px;overflow:hidden}.fd.r{grid-template-columns:5fr 7fr}
+.fd .ph{height:100%;min-height:340px;background:var(--i2) 40% 50%/cover;-webkit-mask-image:linear-gradient(270deg,transparent,#000 38%);mask-image:linear-gradient(270deg,transparent,#000 38%)}
+.fd.r .ph{background-image:var(--i4);background-position:50% 55%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%)}
+.fd .tx{padding:50px 60px}.fd h2{margin:12px 0 14px}.fd p{color:var(--mut);font-size:14px;max-width:300px;margin-bottom:24px}
+.tm{padding:84px 40px;max-width:1280px;margin:auto}.tm h2{margin:12px 0 40px}
+.tg{display:grid;grid-template-columns:7fr 5fr;gap:14px}.big{background:var(--dk);color:#fff;padding:44px}.big q{display:block;font-stretch:112%;font-size:clamp(20px,2.2vw,30px);line-height:1.35;quotes:none;margin-bottom:30px}
+.who{font:400 11px var(--m);letter-spacing:.12em;text-transform:uppercase;color:#aaa}.who b{display:block;color:var(--ac);font-weight:500;margin-bottom:3px}.stars{color:var(--ac);letter-spacing:4px;margin-bottom:18px;font-size:14px}
+.sm{display:grid;gap:14px}.sm blockquote{background:#F7F8F8;border:1px solid var(--line);padding:26px}.sm p{font-size:14px;margin-bottom:16px}.sm .who{color:var(--mut)}.sm .who b{color:var(--ink)}.sm .stars{color:var(--acd)}
+.lg{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:34px 40px;background:#F4F5F5;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-stretch:125%;font-weight:700;color:#7b7f82;letter-spacing:.08em;text-transform:uppercase;font-size:17px}
+.gz{background:linear-gradient(180deg,#E4E6E7,#C9CCCE);position:relative;overflow:hidden}.gz:after{content:"AXIAL";position:absolute;right:-10px;bottom:-34px;font:800 clamp(90px,18vw,260px)/1 var(--d);font-stretch:125%;letter-spacing:.1em;color:rgba(255,255,255,.55);pointer-events:none}.fm{display:grid;grid-template-columns:3fr 9fr;gap:40px;padding:90px 40px 120px;position:relative;z-index:1}.fm h2{margin:12px 0 14px}.fm p{color:var(--mut);font-size:14px;max-width:240px}
+form{display:grid;grid-template-columns:1fr 1fr auto;gap:22px 26px;align-items:end}label{display:block;font:400 9px var(--m);letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+input,select,textarea{width:100%;background:none;border:0;border-bottom:1px solid var(--ink);padding:9px 0;font:400 14px var(--d);color:var(--ink);border-radius:0}.w{grid-column:1/3}form button{background:var(--dk);color:#fff;border-color:var(--dk)}
+footer{background:#0C0D0F;color:#fff;border-top:4px solid var(--ac);padding:56px 40px 24px;font-size:11px}.ft{display:grid;grid-template-columns:3fr 2fr 2fr 2fr 2fr;gap:28px}.ft b{display:block;font:500 9px var(--m);letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;color:var(--ac)}.ft a{display:block;font:400 10px var(--m);letter-spacing:.1em;text-transform:uppercase;color:#a4a9ad;margin-bottom:6px}.ft a:hover{color:var(--ac)}
+.cp{display:flex;justify-content:space-between;margin-top:34px;font:400 9px var(--m);letter-spacing:.12em;color:#8b9094}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+@media(max-width:900px){nav{display:none}header{padding-left:20px;height:64px}header .btn{height:64px;min-width:0;padding:0 18px}
+.hero{min-height:620px;align-items:flex-end}.hero .ph{width:100%;height:55%;bottom:auto;-webkit-mask-image:linear-gradient(0deg,transparent,#000 45%);mask-image:linear-gradient(0deg,transparent,#000 45%)}.hero .in{padding:0 20px 60px}.dots{display:none}
+.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.lin,.fm{grid-template-columns:1fr;padding:48px 20px}.cards,.tg{grid-template-columns:1fr}.cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.card{flex:0 0 78%;scroll-snap-align:start}
+.pw,.fd,.fd.r{grid-template-columns:1fr}.pw .tx,.fd .tx{padding:40px 20px}.pw .ph{order:-1;min-height:240px;-webkit-mask-image:linear-gradient(0deg,transparent,#000 30%);mask-image:linear-gradient(0deg,transparent,#000 30%)}.fd .ph,.fd.r .ph{order:-1;min-height:240px;-webkit-mask-image:linear-gradient(0deg,transparent,#000 35%);mask-image:linear-gradient(0deg,transparent,#000 35%)}
+.tm{padding:56px 20px}.big{padding:28px}.lg{padding:26px 20px;font-size:13px}form{grid-template-columns:1fr}.w{grid-column:auto}.ft{grid-template-columns:1fr 1fr}.cp{flex-direction:column;gap:6px}footer{padding:36px 20px 20px}}
+</style></head><body>
+<section class="hero" id="top"><header><a class="logo" href="#top" aria-label="AXIAL">AXIAL<small>PERFORMANCE GARAGE</small></a>
+<nav aria-label="Principal"><a href="#pacotes">Serviços</a><a href="#preparacao">Preparação</a><a href="#clientes">Clientes</a><a href="#compromisso">Compromisso</a><a href="#orcamento">Contato</a></nav>
+<a class="btn p" href="#orcamento">Agendar agora <span aria-hidden="true">→</span></a></header>
+<div class="ph" role="img" aria-label="Challenger preto com faixas douradas em estacionamento ao pôr do sol"></div>
+<div class="in"><span class="lb">O melhor da performance, na sua mão</span><h1>Potente.<br>Preciso.<br>Axial.</h1>
+<p>Mecânica, injeção e preparação com diagnóstico em bancada. Feito para quem exige o máximo do próprio carro.</p>
+<div class="bt"><a class="btn p" href="#orcamento">Pedir orçamento <span aria-hidden="true">→</span></a><a class="btn" href="#pacotes">Ver pacotes <span aria-hidden="true">▸</span></a></div></div>
+<div class="dots"><b>01</b>02 &nbsp;03 &nbsp;04</div></section>
+
+<section class="stats" aria-label="Números"><div><b>1.800+</b><span>Carros atendidos</span></div><div><b>+38%</b><span>Ganho médio em cv</span></div><div><b>312</b><span>Preparações entregues</span></div><div><b>12 m</b><span>Garantia de serviço</span></div></section>
+
+<section class="wrap"><div class="lin" id="pacotes"><div class="rv"><span class="lb">Pacotes</span><h2>Feito para<br>render.</h2><p>Três níveis de atenção. Um mesmo padrão de execução.</p><a class="btn" href="#orcamento">Ver todos <span aria-hidden="true">→</span></a></div>
+<div class="cards rv"><a class="card" href="#orcamento" style="background-image:var(--i4)" role="img" aria-label="Corsa pickup preta rebaixada"><div><b>Pacote <em>Revisão</em></b><span>A partir de R$ 490</span></div></a>
+<a class="card" href="#orcamento" style="background-image:var(--i5)" role="img" aria-label="Corsa pickup amarela preparada"><div><b>Pacote <em>Performance</em></b><span>A partir de R$ 2.900</span></div></a>
+<a class="card" href="#orcamento" style="background-image:var(--i2);background-position:30% 50%" role="img" aria-label="Camaro azul clássico"><div><b>Pacote <em>Preparação completa</em></b><span>A partir de R$ 9.800</span></div></a></div></div></section>
+
+<section class="dk" id="preparacao"><div class="wrap pw"><div class="tx rv"><span class="lb">Tecnologia de bancada</span><h2>Torque.<br>Mapa.<br>Controle.</h2><p>Dinamômetro, scanner e ECU programável: cada ajuste é medido antes e depois, com laudo para você.</p>
+<div class="ic"><div><b>DINO</b><span>Teste em bancada</span></div><div><b>ECU</b><span>Mapa sob medida</span></div><div><b>AFR</b><span>Mistura calibrada</span></div></div><a class="btn p" href="#orcamento">Conhecer preparação <span aria-hidden="true">→</span></a></div>
+<div class="ph" role="img" aria-label="Motor preparado de uma Corsa pickup amarela com capô aberto"></div></div></section>
+
+<section class="wrap"><div class="fd"><div class="ph" role="img" aria-label="Camaro azul clássico com capô aberto na oficina"></div><div class="tx rv"><span class="lb">Clássicos</span><h2>Detalhe.<br>Sem pressa.</h2><p>Restauração e revisão de clássicos feitas por quem entende de carburador, solda e originalidade.</p><a class="btn" href="#orcamento">Falar sobre meu clássico <span aria-hidden="true">→</span></a></div></div></section>
+
+<section class="tm" id="clientes"><span class="lb">Quem confia</span><h2 class="rv">Clientes que voltam.</h2>
+<div class="tg rv"><div class="big"><div class="stars" aria-label="5 estrelas">★★★★★</div><q>Levei a pickup com o motor falhando em baixa. Eles mostraram o problema na bancada, explicaram tudo e ainda ganhei potência. Hoje não levo em mais nenhum lugar.</q><div class="who"><b>Rafael M.</b>Corsa pickup 1.8 turbo</div></div>
+<div class="sm"><blockquote><div class="stars" aria-label="5 estrelas">★★★★★</div><p>Orçamento certinho, sem surpresa no final. Mandaram foto de cada etapa no WhatsApp.</p><div class="who"><b>Camila S.</b>Revisão completa</div></blockquote>
+<blockquote><div class="stars" aria-label="5 estrelas">★★★★★</div><p>Fizeram a revisão do meu Camaro 67 com um cuidado que eu nunca vi. Entregaram antes do prazo.</p><div class="who"><b>Eduardo T.</b>Camaro clássico</div></blockquote></div></div></section>
+
+<section class="fd r" id="compromisso"><div class="ph" role="img" aria-label="Corsa pickup preta ao lado de um Fusca vermelho de capô aberto"></div><div class="tx rv"><span class="lb">Nosso compromisso</span><h2>Garantia por escrito.<br>Peça original.</h2><p>Peças certificadas, mão de obra assinada e 12 meses de garantia em todo serviço.</p><a class="btn" href="#orcamento">Ver garantia <span aria-hidden="true">→</span></a></div></section>
+
+<div class="lg" aria-label="Marcas de peças que utilizamos"><span>Bosch</span><span>NGK</span><span>Pirelli</span><span>Brembo</span><span>Mobil 1</span><span>Cofap</span></div>
+
+<section class="gz"><div class="wrap fm" id="orcamento"><div><span class="lb">Orçamento</span><h2>Seu carro.<br>Nossa bancada.</h2><p>Resposta no WhatsApp em até 2 horas úteis.</p></div>
+<form id="f"><div><label for="n">Nome</label><input id="n" required autocomplete="name"></div><div><label for="t">Telefone</label><input id="t" type="tel" autocomplete="tel"></div><span></span>
+<div><label for="c">Carro / ano</label><input id="c" required></div><div><label for="s">Serviço</label><select id="s"><option>Revisão</option><option>Performance</option><option>Preparação completa</option><option>Clássicos</option></select></div><span></span>
+<div class="w"><label for="m">Mensagem</label><input id="m"></div><button class="btn" type="submit">Enviar <span aria-hidden="true">→</span></button></form></div></section>
+
+<footer><div class="wrap"><div class="ft"><div><a class="logo" href="#top" style="font-size:16px;color:#fff">AXIAL<small>PERFORMANCE GARAGE</small></a></div>
+<div><b>Serviços</b><a href="#pacotes">Revisão</a><a href="#pacotes">Performance</a><a href="#pacotes">Preparação</a></div><div><b>Oficina</b><a href="#preparacao">Tecnologia</a><a href="#clientes">Clientes</a><a href="#compromisso">Garantia</a></div><div><b>Contato</b><a href="#orcamento">(41) 99999-9999</a><a href="#orcamento">Rua Exemplo, 123</a></div><div><b>Siga</b><a href="#top">Instagram</a><a href="#top">YouTube</a></div></div>
+<div class="cp"><span>© 2026 AXIAL PERFORMANCE GARAGE</span><span>POLÍTICA DE PRIVACIDADE · TERMOS</span></div></div></footer>
+<script>
+try{var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}catch(e){document.querySelectorAll('.rv').forEach(function(el){el.classList.add('on')})}
+document.getElementById('f').addEventListener('submit',function(ev){ev.preventDefault();var g=function(i){return document.getElementById(i).value};
+var t='Olá, AXIAL! Sou '+g('n')+'. Carro: '+g('c')+'. Serviço: '+g('s')+'. '+g('m')+' Tel: '+g('t');
+window.open('https://wa.me/5541999999999?text='+encodeURIComponent(t),'_blank')});
+</script></body></html>
